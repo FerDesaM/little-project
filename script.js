@@ -1,5 +1,3 @@
-let NumberRound=parseInt(prompt("Number of games "));
-let a;
 function getComputerChoice(){
     let opcion=["ROCK","PAPER","SCISOR"];
     let random=Math.floor(Math.random()*opcion.length);
@@ -62,4 +60,5 @@ function PlayGame(NumberRound){
             console.log("Result tie")
         }
 }
+let NumberRound=parseInt(prompt("Number of games "));
 PlayGame(NumberRound);
