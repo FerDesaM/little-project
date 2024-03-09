@@ -54,39 +54,3 @@ let result=WinLoser(ComputerChoice,PlayerChoice);
         alert("Its a tie");
     } 
 }
-
-
-
-
-
-
-
-/*
-function PlayGame(NumberRound){
-    let count=0;
-    let counts=0;
-    for(let i=0;i<NumberRound;i++){
-        let ComputerChoice=getComputerChoice();
-        let UserChoice=prompt("Insert opcion rock, paper ,scisor");
-        var PlayerChoice=UserChoice.toUpperCase();
-        console.log(ComputerChoice);
-        let result=WinLoser(ComputerChoice,PlayerChoice);
-        if(result===1){
-            count++;
-        }else if(result===2){
-            counts++;
-        }
-    }
-        console.log(count);
-        console.log(counts);
-        if(count>counts){
-            console.log("Computer win");
-        }
-        else if(count<counts){
-            console.log("Player win");
-        }
-        else{
-            console.log("Result tie")
-        }
-}
-let NumberRound=parseInt(prompt("Number of games "));*/
