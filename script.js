@@ -3,6 +3,22 @@ function getComputerChoice(){
     let random=Math.floor(Math.random()*opcion.length);
     return opcion[random]
 }
+const paper=document.querySelector("#paper");
+const rock=document.querySelector("#rock");
+const scisor=document.querySelector("#scisor");
+paper.addEventListener("click",()=>{
+    Choice="paper";
+    PlayerChoice=Choice.toUpperCase();
+});
+rock.addEventListener("click",()=>{
+    Choice="rock";
+    PlayerChoice=Choice.toUpperCase();
+}
+);
+scisor.addEventListener("click",()=>{
+    Choice="scisor";
+    PlayerChoice=Choice.toUpperCase();
+});
 
 function WinLoser(ComputerChoice,PlayerChoice){
     let a;
@@ -32,7 +48,16 @@ function WinLoser(ComputerChoice,PlayerChoice){
     }else{
         console.log("Choose another opcion");
     }   
-}/*
+}
+
+
+
+
+
+
+
+
+/*
 function PlayGame(NumberRound){
     let count=0;
     let counts=0;
@@ -59,6 +84,5 @@ function PlayGame(NumberRound){
         else{
             console.log("Result tie")
         }
-}*/
-let NumberRound=parseInt(prompt("Number of games "));
-PlayGame(NumberRound);
+}
+let NumberRound=parseInt(prompt("Number of games "));*/
