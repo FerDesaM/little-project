@@ -32,7 +32,7 @@ function WinLoser(ComputerChoice,PlayerChoice){
     }else{
         console.log("Choose another opcion");
     }   
-}
+}/*
 function PlayGame(NumberRound){
     let count=0;
     let counts=0;
@@ -59,6 +59,6 @@ function PlayGame(NumberRound){
         else{
             console.log("Result tie")
         }
-}
+}*/
 let NumberRound=parseInt(prompt("Number of games "));
 PlayGame(NumberRound);
