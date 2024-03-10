@@ -40,17 +40,35 @@ function WinLoser(ComputerChoice,PlayerChoice){
     }else{
     }   
 }
+let compVictorie=0;
+    let playerVictorie=0;
 function PlayGame(){
-const ComputerChoice=getComputerChoice();
-console.log("Computer Choice: ",ComputerChoice);
-console.log("Player Choice: ",PlayerChoice);
-let result=WinLoser(ComputerChoice,PlayerChoice);
+    const ComputerChoice=getComputerChoice();
+    
+    const getResult=document.querySelector("#result");
+    
+    
+    const getCompChoice=document.createElement("p");
+    getCompChoice.classList.add("getCompChoice");
+    getCompChoice.textContent="Computer Choice "+ComputerChoice;
+    
+    getResult.innerHTML = "";
+
+    getResult.appendChild(getCompChoice);
+    
+    getResult.textContent = `Computer points: ${compVictorie}`;
+    getResult.textContent += ` Player points: ${playerVictorie}`;
+    let result=WinLoser(ComputerChoice,PlayerChoice);
     if(result===1){
-        alert("You Lose! "+ComputerChoice+" beats "+PlayerChoice);
+    compVictorie++;
+    }else if(result===2){
+    playerVictorie++;
     }
-    else if(result===2){
-        alert("You Win! "+ PlayerChoice +" beats "+ComputerChoice);
-    }else{
-        alert("Its a tie");
-    } 
+    console.log(compVictorie);
+    console.log(playerVictorie);
+    if(compVictorie===5){
+    getResult.textContent="You Lose! Winner: Computer";
+    }else if(playerVictorie===5){
+    getResult.textContent="You Win Winner: Player"
+    }
 }
